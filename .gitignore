@@ -1,0 +1,26 @@
+# ---------------------------------------------
+# Python Bytecode & Cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual Environments
+.env/
+.venv/
+venv/
+ENV/
+env/
+
+# Distribution / Packaging
+build/
+dist/
+.eggs/
+*.egg-info/
+*.egg
+
+*.pdf
+model.txt
+checkpoints/*
+!checkpoints/.gitkeep
+
+*.csv
