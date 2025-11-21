@@ -24,3 +24,4 @@ checkpoints/*
 !checkpoints/.gitkeep
 
 *.csv
+*.ipynb

@@ -21,7 +21,7 @@ elif len(sys.argv) > 2 and sys.argv[1] == "--load-checkpoint":
     print(f"Loaded checkpoint from iteration {iteration_number}")
     # resume optimization from checkpoint
     nn = genetic.optimize(
-        taillePopulation=400,
+        taillePopulation=1000,
         tailleSelection=50,
         pc=0.8,
         mr=2.0,
