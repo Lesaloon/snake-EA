@@ -5,13 +5,13 @@ This project trains a Snake-playing agent using a simple neural network evolved 
 ## Quick Demo
 
 **Iteration 50 (early training)**
-![Iteration 50](iter_50.gif)
+![Iteration 50](/docs/iter50.gif)
 
 **Iteration 350 (later training)**
-![Iteration 350](iter_350.gif)
+![Iteration 350](/docs/iter350.gif)
 
 **Training Progress**
-![Training chart](training_chart.png)
+![Training chart](/docs/training_chart.png)
 
 ## What It Does
 
