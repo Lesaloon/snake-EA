@@ -17,6 +17,31 @@ This project trains a Snake-playing agent using a simple neural network evolved 
 
 ![Training chart](/docs/training_chart.png)
 
+### explanation of the chart
+
+We can see that initially the best score was stagnant / slightly increasing, meaning the snakes were not learning much as they were hitting walls quickly (see iteration 50 gif).
+Around iteration 150 we see a first breakthrough where the best score jumps significantly (from 13 to 150), indicating that the snakes have learned to survive longer and navigate the grid more effectively (see iteration 350 gif).
+Then we can identify a second breakthrough around iteration 380 where the best score increases again (from 150 to 261), showing further improvement in the snakes' ability to play the game (see iteration 480 gif).
+
+We do not see any other significant breakthroughs after iteration 400, suggesting that the snakes have reached a plateau in their learning curve. This indicates that while they have improved their gameplay, further enhancements may require changes in the training approach or model architecture.
+
+The snakes' performance is i believe limited by the simplicity of the neural network and the input features provided to it.
+Currently the features are quite basic ( is there an obstacle in each direction, is the food on top/below/left/right, and the direction the snake is moving). More complex features or a larger network might help improve performance further.
+
+Features that i believe could help:
+
+- Distance to food in each direction
+- The length of the snake
+- More hidden layers / neurons in the neural network
+
+We could also experiment with a "memory" mechanism, allowing the snake to remember past states or actions, which could help it make better decisions like avoiding its own tail.
+
+This could also be achieved by having a CNN that for input has the entire grid state (for each cell: empty, food, snake body, snake head) instead of just a few features.
+But this method would prevent the model to generalize to different grid sizes.
+To keep generalization we could change the game to move the snake to the other side of the grid when it goes out of bounds instead of ending the game.
+But a better solution would be to have the CNN with a fixed input size (e.g.: 10x10 grid around the snake head) and have the snake always in the center of the input grid.
+This would alow generalization to different grid sizes while still providing the model with a full view of the snake's immediate surroundings.
+
 ## What It Does
 
 - Plays the classic Snake game on a small grid.
